@@ -1,0 +1,20 @@
+manifest_version: 2
+name: 'Drawasaurus Count'
+version: '1.0'
+description: 'Show count of letters in words in Drawasaurus games'
+author: 'Jer Megel'
+icons:
+	96: 'images/drawasaurus_count/96.png'
+content_scripts: [
+	{
+		matches: [
+			'*://*.drawasaurus.org/room/*'
+		]
+		js: [
+			'js/content/drawasaurus/main.js'
+		]
+	}
+]
+browser_specific_settings:
+	gecko:
+		id: 'drawasaurus_count@jer.dev'
